@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="TwitterSample.FixedPhrasePage" 
+			 Title="定形文を選んでね">
+	<ContentPage.Content>
+		<ScrollView Padding="10,20,10,0">
+			<StackLayout>
+				<Button Command="{Binding SetFixedPhrase}" Text="進捗ダメです" CommandParameter="進捗ダメです" />
+				<Button Command="{Binding SetFixedPhrase}" Text="お腹痛い(´・ω・｀)" CommandParameter="お腹痛い(´・ω・｀)" />
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

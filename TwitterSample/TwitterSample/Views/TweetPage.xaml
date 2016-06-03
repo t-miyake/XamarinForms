@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 xmlns:behaviors="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors" 
+			 xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize" 
+			 x:Class="TwitterSample.TweetPage" 
+			 Title="Tweet">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Padding="2,0,2,0">
+				<Editor Text="{Binding TweetText,Mode=TwoWay}" HeightRequest="230">
+					<behaviors:Interaction.Behaviors>
+						<behaviors:BehaviorCollection>
+							<behaviors:EventToCommand EventName="TextChanged" Command="{Binding CountWord}" />
+						</behaviors:BehaviorCollection>
+					</behaviors:Interaction.Behaviors>
+				</Editor>
+				<Label Text="{Binding WordCount, StringFormat='{0}文字' ,Mode=OneWay}" HorizontalTextAlignment="End" />
+				<iconize:IconButton Command="{Binding Tweet}" Text="fa-twitter" FontSize="40" BorderColor="Gray" BorderWidth="1" />
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+					</Grid.ColumnDefinitions>
+					<iconize:IconButton Command="{Binding GoToFixedPhrasePage}" Text="定形文" Grid.Column="0" Grid.Row="1" BorderColor="Gray" BorderWidth="1" />
+					<Button Command="{Binding Reset}" Text="クリア" Grid.Column="2" Grid.Row="1" BorderColor="Gray" BorderWidth="1" />
+				</Grid>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
