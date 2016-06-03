@@ -56,7 +56,7 @@ namespace TwitterSample
                         ScreenName = tweet.User.ScreenName,
                         Name = tweet.User.Name,
                         Tweet = tweet.Text,
-                        CreatedAt = tweet.CreatedAt.ToString("f"),
+                        CreatedAt = tweet.CreatedAt.AddHours(9).ToString("f"),
                         Icon = tweet.User.ProfileImageUrl
                     });
                 }
