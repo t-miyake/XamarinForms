@@ -23,9 +23,10 @@ namespace TwitterSample.Droid
             Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule());
 
             Corcav.Behaviors.Infrastructure.Init();
-            FormsPlugin.Iconize.Droid.IconControls.Init();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            FormsPlugin.Iconize.Droid.IconControls.Init(Resource.Id.toolbar, Resource.Id.sliding_tabs);
 
             LoadApplication(new App());
         }
