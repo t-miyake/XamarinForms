@@ -10,6 +10,7 @@ namespace TwitterSample
             // The root page of your application
 
             //IconizeライブラリのIconTabbedPageを使用する為、TabbedPageの生成のみXAMLではなくC#で記載。
+            //※試したらXAMLでも書けました。
             var TabbedPage = new IconTabbedPage { Title = "Twitter" };
 
             foreach (var module in Plugin.Iconize.Iconize.Modules)
