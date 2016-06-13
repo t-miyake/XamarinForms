@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="AkicolleTwitterSample.MainPage" Title="うさすけにツイートするよ！">
+	<ContentPage.Content>
+		<ScrollView Padding="30,20,30,0">
+			<StackLayout>
+				<Button Command="{Binding Tweet}" Text="やあ" CommandParameter="やあ" BorderColor="Gray" BorderWidth="1" />
+				<Button Command="{Binding Tweet}" Text="こんにちは" CommandParameter="こんにちは" BorderColor="Gray" BorderWidth="1" />
+				<Button Command="{Binding Tweet}" Text="うぇーい" CommandParameter="うぇーい" BorderColor="Gray" BorderWidth="1" />
+				<Button Command="{Binding Tweet}" Text="おっす" CommandParameter="おっす" BorderColor="Gray" BorderWidth="1" />
+				<Button Command="{Binding Tweet}" Text="|дﾟ)ﾁﾗｯ" CommandParameter="|дﾟ)ﾁﾗｯ" BorderColor="Gray" BorderWidth="1" />
+				<Button Command="{Binding Tweet}" Text="(｀・ω・´)ｼｬｷｰﾝ" CommandParameter="(｀・ω・´)ｼｬｷｰﾝ" BorderColor="Gray" BorderWidth="1" />
+				<Button Command="{Binding Tweet}" Text="(´・ω・｀)ｼｮﾎﾞｰﾝ" CommandParameter="(´・ω・｀)ｼｮﾎﾞｰﾝ" BorderColor="Gray" BorderWidth="1" />
+				<Button Command="{Binding Tweet}" Text="(´；ω；｀)ﾌﾞﾜｯ" CommandParameter="(´；ω；｀)ﾌﾞﾜｯ" BorderColor="Gray" BorderWidth="1" />
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
