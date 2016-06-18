@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TaitoTourismMap.InfoPage" Title="出典">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Padding="10,0,10,0">
+				<Label Text="公共クラウド（総務省）" />
+				<Label Text="【観光情報】" />
+				<Label Text="CCライセンス 表示 2.1 日本" />
+				<Label Text="（http://creativecommons.org/licenses/by/2.1/jp/）" />
+				<Label Text="公共クラウド利用規約" />
+				<Label Text="（https://www.chiikinogennki.soumu.go.jp/k-cloud-api/code/）" />
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

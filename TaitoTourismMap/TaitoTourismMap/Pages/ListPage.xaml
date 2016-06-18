@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize" xmlns:b="clr-namespace:TaitoTourismMap;assembly=TaitoTourismMap" xmlns:c="clr-namespace:TaitoTourismMap;assembly=TaitoTourismMap" x:Class="TaitoTourismMap.ListPage" Title="一覧" Icon="fa-list" x:Name="ListPage">
+	<ContentPage.ToolbarItems>
+		<iconize:IconToolbarItem Icon="fa-info-circle" Command="{Binding InfoButton}" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<c:ItemTappedEventArgsConverter x:Key="ItemTappedConverter" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+		<StackLayout Padding="15,0,15,0">
+			<ListView ItemsSource="{Binding TouristSpot}" HasUnevenRows="true" IsPullToRefreshEnabled="false">
+				<ListView.Behaviors>
+					<b:EventToCommandBehavior EventName="ItemTapped" Command="{Binding ItemTapped}" EventArgsConverter="{StaticResource ItemTappedConverter}" EventArgsConverterParameter="{x:Reference ListPage}" />
+				</ListView.Behaviors>
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+								<Image Source="{Binding ImageURL}" WidthRequest="60" HeightRequest="60" VerticalOptions="Start" />
+								<StackLayout Spacing="0">
+									<StackLayout Orientation="Horizontal">
+										<Label Text="{Binding Name}" FontSize="13" />
+										<Label Text="{Binding Genre}" FontSize="10" TextColor="Gray" />
+									</StackLayout>
+									<StackLayout Orientation="Horizontal">
+										<Label Text="{Binding Place}" FontSize="10" TextColor="Gray" />
+									</StackLayout>
+									<Label Text="{Binding Description}" FontSize="11" />
+								</StackLayout>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

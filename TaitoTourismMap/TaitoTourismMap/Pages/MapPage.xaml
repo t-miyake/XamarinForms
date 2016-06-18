@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Map="clr-namespace:TK.CustomMap;assembly=TK.CustomMap" xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize" x:Class="TaitoTourismMap.MapPage" Title="マップ" Icon="fa-map">
+	<ContentPage.ToolbarItems>
+		<iconize:IconToolbarItem Icon="fa-info-circle" Command="{Binding InfoButton}" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+			<StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+				<Map:TKCustomMap HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsShowingUser="true" HasZoomEnabled="true" HasScrollEnabled="true" MapType="Street" MapRegion="{Binding MapRegion}" CustomPins="{Binding CustomPins}" />
+			</StackLayout>
+			<ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize" />
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>
