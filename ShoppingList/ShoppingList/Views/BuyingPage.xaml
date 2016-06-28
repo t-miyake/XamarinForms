@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:b="clr-namespace:ShoppingList;assembly=ShoppingList" x:Class="ShoppingList.BuyingPage" Title="買う物">
+	<ContentPage.Content>
+		<StackLayout Padding="10,5,10,0">
+			<StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+				<Entry HorizontalOptions="FillAndExpand" Placeholder="商品の名前" Text="{Binding EntryText}" x:Name="NewItem" />
+				<Button Text=" + " WidthRequest="70" Command="{Binding AddButton}" CommandParameter="{x:Reference NewItem}" />
+			</StackLayout>
+			<ListView ItemsSource="{Binding ShoppingList}" b:Behavior.Command="{Binding ItemTapped}">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<TextCell Text="{Binding Item}"/>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
