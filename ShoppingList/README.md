@@ -2,7 +2,7 @@
 Xamarin.Forms と Microsoft Azure Moblie Appsを使用したアプリのサンプルです。  
 ハンズオン用に作成したもののため、下記にハンズオン資料も併せて置いてあります。
 
-[ハンズオン資料](https://github.com/t-miyake/XamarinForms/blob/master/ShoppingList/Hands-on.pdf)  
+[ハンズオン資料](http://noraneko.co.jp/Azure_Xamarin.pdf)  
 
 
 その他参考資料  
