@@ -1,5 +1,10 @@
 # ShoppingList
 Xamarin.Forms と Microsoft Azure Moblie Appsを使用したアプリのサンプルです。  
-ハンズオンで使用するため作成したもののため、下記にハンズオンの資料も置いておきます。
+ハンズオン用に作成したもののため、下記にハンズオン資料も併せて置いてあります。
 
-[ハンズオン資料](https://github.com/t-miyake/XamarinForms/blob/master/ShoppingList/Hands-on.pdf)
+[ハンズオン資料](https://github.com/t-miyake/XamarinForms/blob/master/ShoppingList/Hands-on.pdf)  
+
+
+その他参考資料  
+- [DreamSparkとAzureの登録手順](http://noraneko.co.jp/documents/DreamSpark_20160625.pdf)  
+- [Xamarinのインストール手順(OLD)](http://noraneko.co.jp/documents/Xamarin_20160625.pdf)
