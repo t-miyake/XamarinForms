@@ -20,7 +20,7 @@ namespace ShoppingList
         private Model() { }
 
         // Insert your application URL.
-        // Sample "http://miyakeshoppinglist.azurewebsites.net"
+        // Sample "https://miyakeshoppinglist.azurewebsites.net"
         const string ApplicationUrl = "ApplicationUrl";
         readonly MobileServiceClient client = new MobileServiceClient(ApplicationUrl);
 
