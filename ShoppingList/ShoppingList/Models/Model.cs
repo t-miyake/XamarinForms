@@ -29,7 +29,7 @@ namespace ShoppingList
         public ObservableCollection<ShoppingItems> BoughtList = new ObservableCollection<ShoppingItems>();
 
 
-        public async void FetchShoppingList()
+        public async Task FetchShoppingList()
         {
             var FetchedItems = await FetchItemes(false);
             ShoppingList.Clear();
@@ -39,7 +39,7 @@ namespace ShoppingList
             }
         }
 
-        public async void FetchBoughtList()
+        public async Task FetchBoughtList()
         {
             var FetchedItems = await FetchItemes(true);
             BoughtList.Clear();
@@ -56,7 +56,7 @@ namespace ShoppingList
             return FetchedItems;
         }
 
-        public async void ItemAdd(Entry item)
+        public async Task ItemAdd(Entry item)
         {
             if (!string.IsNullOrEmpty(item.Text))
             {
@@ -66,7 +66,7 @@ namespace ShoppingList
             }
         }
 
-        public async void BoughtItem(ShoppingItems item)
+        public async Task BoughtItem(ShoppingItems item)
         {
             item.Bought = true;
             await client.GetTable<ShoppingItems>().UpdateAsync(item);

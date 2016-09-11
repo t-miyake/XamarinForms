@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -13,11 +14,11 @@ namespace ShoppingList
 
         public BuyingPageViewModel()
         {
-            AddButton = new Command((EventArgs) =>
+            AddButton = new Command(async (EventArgs) =>
             {
                 if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
                 {
-                    Model.ItemAdd((Entry)EventArgs);
+                    await Model.ItemAdd((Entry)EventArgs);
                     EntryText = "";
                 }
             });
@@ -28,17 +29,17 @@ namespace ShoppingList
                 {
                     if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
                     {
-                        Model.BoughtItem(EventArgs as ShoppingItems);
+                        await Model.BoughtItem(EventArgs as ShoppingItems);
                     }
                 }
             });
         }
 
-        public void Initialize()
+        public async Task Initialize()
         {
             if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
-                Model.FetchShoppingList();
+                await Model.FetchShoppingList();
             }
         }
 

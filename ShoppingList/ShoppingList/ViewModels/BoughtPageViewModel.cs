@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace ShoppingList
 {
@@ -6,11 +7,11 @@ namespace ShoppingList
     {
         Model Model = Model.Instance;
 
-        public void Initialize()
+        public async Task Initialize()
         {
             if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
-                Model.FetchBoughtList();
+                await Model.FetchBoughtList();
             }
         }
 

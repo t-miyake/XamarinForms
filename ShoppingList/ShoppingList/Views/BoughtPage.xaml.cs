@@ -10,12 +10,12 @@ namespace ShoppingList
             BindingContext = new BoughtPageViewModel();
         }
 
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
 
             var ViewModel = BindingContext as BoughtPageViewModel;
-            ViewModel.Initialize();
+            await ViewModel.Initialize();
         }
     }
 }
