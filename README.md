@@ -1,9 +1,16 @@
 # Xamarin.Forms 練習用
 Xamarin.Formsの練習用に作成したサンプル的なアプリです。
 
+##[AddAdMobBannerSample](https://github.com/t-miyake/XamarinForms/tree/master/AddAdMobBannerSample)
+Xamarin.FormsでAdMobのバナー広告を表示するサンプルです。(iOSとAndroid)  
+カスタムレンダラーを使用して表示しています。  
+
+##[ShoppingList](https://github.com/t-miyake/XamarinForms/tree/master/ShoppingList)
+ハンズオン用に作成したお買い物メモアプリです。  
+バックエンドにMicrosoft Azure(Mobile Apps)を使用し、データをクラウドに保存します。  
+
 ##[TaitoTourismMap](https://github.com/t-miyake/XamarinForms/tree/master/TaitoTourismMap)
-総務省のオープンデータから取得した、台東区の観光地の情報をマップ上に表示します。  
-説明は準備中です。
+総務省のオープンデータから取得した台東区の観光地の情報をマップ上に表示します。  
 
 ##[TwitterSample](https://github.com/t-miyake/XamarinForms/tree/master/TwitterSample)
 とても簡単なTwitterクライアントです。  
