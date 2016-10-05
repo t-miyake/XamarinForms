@@ -18,5 +18,11 @@ namespace AddAdMobBannerSample.iOS
 
             return base.FinishedLaunching(app, options);
         }
+
+        [Export("window")]
+        public UIWindow GetWindow()
+        {
+            return UIApplication.SharedApplication.Windows[0];
+        }
     }
 }

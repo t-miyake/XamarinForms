@@ -8,13 +8,12 @@ namespace AddAdMobBannerSample
     {
         public App()
         {
-           
+           MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
         {
             // Handle when your app starts
-            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnSleep()
